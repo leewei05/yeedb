@@ -11,6 +11,18 @@ type Token struct {
 	loc   Location
 }
 
+type TokenKind int
+
+const (
+	Keyword = iota
+	Symbol
+	Identifier
+	String
+	Numberic
+	Bool
+	Null
+)
+
 func lexer(stmt string) []Token {
 
 	return []Token{}
