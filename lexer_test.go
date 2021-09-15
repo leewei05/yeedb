@@ -11,7 +11,7 @@ func TestSimpleLexer(t *testing.T) {
 	expectTokens := []Token{
 		{
 			value: "SELECT",
-			kind:  1,
+			kind:  IdentifierKind,
 			loc: Location{
 				line:   0,
 				column: 0,
@@ -19,7 +19,7 @@ func TestSimpleLexer(t *testing.T) {
 		},
 		{
 			value: "*",
-			kind:  2,
+			kind:  SymbolKind,
 			loc: Location{
 				line:   0,
 				column: 7,
@@ -27,7 +27,7 @@ func TestSimpleLexer(t *testing.T) {
 		},
 		{
 			value: "FROM",
-			kind:  1,
+			kind:  KeywordKind,
 			loc: Location{
 				line:   0,
 				column: 9,
@@ -35,7 +35,7 @@ func TestSimpleLexer(t *testing.T) {
 		},
 		{
 			value: "test",
-			kind:  2,
+			kind:  IdentifierKind,
 			loc: Location{
 				line:   0,
 				column: 14,
