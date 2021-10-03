@@ -18,6 +18,5 @@ func (c *ClockReplacer) Unpin(frame int) {
 }
 
 func (c *ClockReplacer) Size() int {
-
-	return 0
+	return len(c.frames)
 }
